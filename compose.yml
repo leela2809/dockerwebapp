@@ -5,22 +5,22 @@ services:
     image: leela2809/myrepo:db
     ports:
       - "3306:3306"
-    # deploy:
-    #   replicas: 3
-    # networks:
-    #   - mynetwork
-   
+    deploy:
+      replicas: 1
+    networks:
+      - mynetwork
+
   application:
     image: leela2809/myrepo:app
     ports:
       - "1111:8080"
-    # deploy:
-    #   replicas: 3
+    deploy:
+      replicas: 3
     depends_on:
       - devopsdb
-    # networks:
-    #   - mynetwork
+    networks:
+      - mynetwork
 
-# networks:
-#   mynetwork:
-#     driver: overlay
+networks:
+  mynetwork:
+    driver: overlay
