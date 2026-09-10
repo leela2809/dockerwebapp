@@ -18,9 +18,7 @@ spec:
           image: leela2809/myrepo:appimage
           ports:
             - containerPort: 8080
-      imagePullSecrets:
-        - name: flm
-
+      
 
 
 
