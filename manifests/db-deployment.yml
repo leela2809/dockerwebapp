@@ -18,8 +18,7 @@ spec:
           image: leela2809/myrepo:dbimage
           ports:
             - containerPort: 3306
-      imagePullSecrets:
-        - name: flm
+      
 
 
 
